@@ -1,0 +1,77 @@
+/* src/Cadastro.css */
+
+/* Estilo geral do formulário */
+.container {
+    max-width: 700px; /* Largura máxima para centralizar o formulário */
+    margin-top: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+  }
+  
+  /* Estilo dos campos de entrada */
+  .form-control {
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+    padding: 10px; /* Preenchimento interno */
+  }
+  
+  /* Estilo do botão de envio */
+  button[type="submit"] {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 12px;
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #007bff; /* Cor do botão */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+    cursor: pointer;
+  }
+  
+  /* Espaçamento geral e borda dos campos */
+  .form-group {
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control:focus {
+    border-color: #0056b3; /* Cor ao focar nos campos */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+  }
+  
+  /* Estilo para o fundo */
+  body {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .container {
+    display: flex;               /* Define um container flexível */
+    justify-content: center;     /* Centraliza o conteúdo horizontalmente */
+    align-items: center;         /* Centraliza o conteúdo verticalmente */
+    background-origin: padding-box;
+    width: 50%;                  /* Define a largura para 50% */
+    margin: 0 auto;              /* Aplica margem automática para centralizar o container */
+    height: 100vh;               /* Faz a altura da tela para centralizar verticalmente */
+  }
+  

@@ -1,0 +1,82 @@
+/* Estilos para a seção de banner sobre */
+.sobre-banner {
+    background-color: #6c757d; /* Cor de fundo para o banner */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinha o conteúdo no centro */
+    padding: 60px 0; /* Espaçamento acima e abaixo */
+  }
+  
+  /* Título do banner */
+  .sobre-banner h1 {
+    font-size: 2.5rem; /* Tamanho maior para o título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-weight: bold; /* Deixa o título em negrito */
+  }
+  
+  /* Subtítulo do banner */
+  .sobre-banner p {
+    font-size: 1.2rem; /* Tamanho de fonte para o parágrafo */
+    margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+  }
+  
+  /* Container do conteúdo da seção "Sobre" */
+  #sobre {
+    margin-top: 40px; /* Espaçamento acima da seção */
+  }
+  
+  /* Título dentro do conteúdo */
+  #sobre h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 2rem; /* Tamanho do título */
+    font-weight: bold; /* Deixa o título em negrito */
+  }
+  
+  /* Parágrafos dentro da seção "Sobre" */
+  #sobre p {
+    font-size: 1.1rem; /* Tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+  }
+  
+  /* Cartão de "Como Funciona" */
+  .card {
+    margin-top: 20px; /* Espaçamento acima do cartão */
+  }
+  
+  .card-body {
+    padding: 20px; /* Preenchimento interno do cartão */
+  }
+  
+  .card-title {
+    font-weight: bold; /* Deixa o título do cartão em negrito */
+    font-size: 1.5rem; /* Tamanho do título do cartão */
+  }
+  
+  .card-text {
+    font-size: 1rem; /* Tamanho do texto dentro do cartão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+  }
+  
+  /* Responsividade: Ajustes para telas pequenas */
+  @media (max-width: 768px) {
+    .sobre-banner h1 {
+      font-size: 2rem; /* Tamanho menor para o título */
+    }
+  
+    .sobre-banner p {
+      font-size: 1rem; /* Tamanho menor para o subtítulo */
+    }
+  
+    #sobre h2 {
+      font-size: 1.8rem; /* Tamanho menor para o título */
+    }
+  
+    #sobre p {
+      font-size: 1rem; /* Tamanho menor para os parágrafos */
+    }
+  
+    .card {
+      margin-top: 20px;
+    }
+  }
+  

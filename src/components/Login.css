@@ -1,0 +1,30 @@
+.my-5 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.form-control {
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+button {
+  width: 10%;
+  padding: 10px;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0069d9;
+  border-color: #0062cc
+}

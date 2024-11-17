@@ -1,0 +1,40 @@
+.aluno-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aluno-container h1 {
+    text-align: center;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.aluno-container p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.aluno-actions button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px; 
+    min-width: 100px;
+}
+
+.aluno-actions button:first-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+.aluno-actions button:last-child {
+    background-color: #2196f3;
+    color: white;
+}

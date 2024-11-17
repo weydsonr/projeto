@@ -1,0 +1,40 @@
+.lista-relatorios-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.relatorio-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    color: #333;
+}
+
+.relatorio-item p {
+    margin: 5px 0;
+}
+
+/* Cores de sinalização reutilizadas */
+.sinalizacao-verde {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+}
+
+.sinalizacao-amarelo {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+}
+
+.sinalizacao-vermelho {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}

@@ -1,0 +1,29 @@
+/* Cores de sinalização */
+.sinalizacao-verde {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+}
+
+.sinalizacao-amarelo {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+}
+
+.sinalizacao-vermelho {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}
+
+.btn-navigate {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-navigate:hover {
+    background-color: #0056b3;
+}

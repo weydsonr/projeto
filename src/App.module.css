@@ -1,0 +1,113 @@
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-full-width {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #007bff; 
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ddd !important;
+}
+
+.navbar-toggler-icon {
+  background-color: white; 
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Banner da Home */
+.banner {
+  background-color: #17a2b8; /* Azul claro */
+  color: white;
+  text-align: center;
+  padding: 80px 15px;
+  margin-top: 60px; /* Para evitar sobreposição com a Navbar fixa */
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.banner .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+/* Página Sobre */
+.sobre-banner {
+  background-color: #6c757d; /* Cinza escuro */
+  color: white;
+  text-align: center;
+  padding: 60px 15px;
+}
+
+.sobre-banner h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.sobre-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40; /* Cor escura para o footer */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin-bottom: 10px;
+  }
+}
