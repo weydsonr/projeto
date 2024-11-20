@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Perfil.css'; // Certifique-se de que o CSS está configurado corretamente
 
 const Perfil = () => {
-  // Definir as informações iniciais do perfil (simulação de dados do banco)
   const [perfil, setPerfil] = useState({
     nome: 'João Silva',
     dataNascimento: '1990-05-15',
@@ -12,12 +11,12 @@ const Perfil = () => {
     contato: '987654321',
     formacao: 'Licenciatura em Matemática',
     disciplina: 'Matemática',
-    turma: '3º Ano - A'
+    turma: '3º Ano - A',
+    foto: 'https://via.placeholder.com/150' // Link da foto de perfil
   });
 
   const [isEditing, setIsEditing] = useState(false);
 
-  // Função para atualizar o valor dos campos do perfil
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPerfil(prevState => ({
@@ -26,25 +25,45 @@ const Perfil = () => {
     }));
   };
 
-  // Função para alternar entre modo de edição e visualização
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setPerfil(prevState => ({
+        ...prevState,
+        foto: URL.createObjectURL(file)
+      }));
+    }
+  };
+
   const toggleEdit = () => {
     setIsEditing(prevState => !prevState);
   };
 
-  // Função para salvar as alterações (poderia envolver uma chamada à API)
   const saveChanges = () => {
-    // Simula salvar as mudanças, aqui você pode adicionar a lógica de backend
     alert('Alterações salvas com sucesso!');
-    toggleEdit(); // Desliga o modo de edição após salvar
+    toggleEdit(); 
   };
 
   return (
     <div className="perfil-container">
-      <h2>Perfil do Usuário</h2>
+      <h2>Perfil do Professor</h2>
 
       <div className="perfil-info">
+        <div className="campo foto-container">
+          <label>Foto de Perfil: </label>
+          {isEditing ? (
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+            />
+          ) : (
+            <img src={perfil.foto} alt="Foto de Perfil" className="foto" />
+          )}
+        </div>
+
         <div className="campo">
-          <label>Nome:</label>
+          <label>Nome: </label>
           {isEditing ? (
             <input
               type="text"
@@ -58,7 +77,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>Data de Nascimento:</label>
+          <label>Data de Nascimento: </label>
           {isEditing ? (
             <input
               type="date"
@@ -72,7 +91,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>Sexo:</label>
+          <label>Sexo: </label>
           {isEditing ? (
             <select
               name="sexo"
@@ -88,7 +107,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>Endereço:</label>
+          <label>Endereço: </label>
           {isEditing ? (
             <input
               type="text"
@@ -102,7 +121,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>E-mail:</label>
+          <label>E-mail: </label>
           {isEditing ? (
             <input
               type="email"
@@ -130,7 +149,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>Formação Acadêmica:</label>
+          <label>Formação Acadêmica: </label>
           {isEditing ? (
             <input
               type="text"
@@ -144,7 +163,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>Disciplina de Ensino:</label>
+          <label>Disciplina de Ensino: </label>
           {isEditing ? (
             <input
               type="text"
@@ -158,7 +177,7 @@ const Perfil = () => {
         </div>
 
         <div className="campo">
-          <label>Turma Responsável:</label>
+          <label>Turma Responsável: </label>
           {isEditing ? (
             <input
               type="text"

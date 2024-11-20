@@ -1,49 +1,80 @@
+/* Estilos principais para a página de perfil */
 .perfil-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Efeito suave de neon */
+  text-align: center;
 }
 
-.perfil-info {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
+.perfil-container h2 {
+  color: #00bfff; /* Azul neon */
+  font-size: 2.5em;
   margin-bottom: 20px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
 }
 
-.campo {
+/* Caixa das informações */
+.perfil-info {
   display: flex;
-  align-items: center;
-}
-
-.campo label {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.campo input, .campo select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.actions {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
+/* Cada campo de informação */
+.campo {
+  background-color: #1c1f2b;
+  border: 1px solid #00bfff; /* Borda neon */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 45%; /* Metade da largura para duas caixas lado a lado */
+  box-shadow: 0 0 5px rgba(0, 191, 255, 0.5); /* Efeito de brilho suave */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
+.campo:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.8); /* Intensificação do efeito neon */
+}
+
+/* Foto de perfil */
+.foto-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.foto {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Efeito neon na foto */
+}
+
+/* Estilo dos botões */
+.actions button {
+  background-color: #00bfff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Efeito neon no botão */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.actions button:hover {
+  background-color: #008fcc;
+  box-shadow: 0 0 20px #00bfff;
+}
+
+.actions button:focus {
+  outline: none;
 }

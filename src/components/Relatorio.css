@@ -1,29 +1,93 @@
-/* Cores de sinalização */
-.sinalizacao-verde {
-    background-color: #d4edda;
-    border-left: 5px solid #28a745;
+.relatorio-page .relatorio-container {
+    background-color: #1c1f2b; /* Fundo escuro para contraste */
+    color: #ffffff; /* Texto branco */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
 }
 
-.sinalizacao-amarelo {
-    background-color: #fff3cd;
-    border-left: 5px solid #ffc107;
+.relatorio-page h1 {
+    text-align: center;
+    color: #00bfff; /* Azul neon */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
 }
 
-.sinalizacao-vermelho {
-    background-color: #f8d7da;
-    border-left: 5px solid #dc3545;
+.relatorio-page .form-group {
+    margin-bottom: 15px;
+    padding: 5px; /* Menor padding para reduzir o espaço */
+    border: 1px solid #00bfff; /* Borda neon */
+    border-radius: 8px;
+    background: rgba(0, 0, 50, 0.3); /* Fundo translúcido */
 }
 
-.btn-navigate {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+.relatorio-page label {
+    display: block;
+    font-weight: bold;
+    color: #00e6ff; /* Azul neon */
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #00e6ff, 0 0 10px #00bfff; /* Efeito neon no label */
+}
+
+.relatorio-page input[type="text"],
+.relatorio-page textarea,
+.relatorio-page select {
+    width: 100%;
+    padding: 8px; /* Ajuste no padding para reduzir o espaço */
+    margin-top: 5px;
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    background-color: #2a2d3e;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.relatorio-page input[type="text"]:focus,
+.relatorio-page textarea:focus,
+.relatorio-page select:focus {
+    border-color: #00e6ff;
+    box-shadow: 0 0 15px #00bfff;
+}
+
+.relatorio-page textarea {
+    resize: none; /* Impede redimensionamento */
+}
+
+.relatorio-page button {
+    display: block;
+    width: 100%;
+    padding: 8px; /* Reduzido o padding para botões mais compactos */
+    margin-top: 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.btn-navigate:hover {
-    background-color: #0056b3;
+.relatorio-page .btn-primary {
+    background-color: #00bfff; /* Azul neon */
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.relatorio-page .btn-primary:hover {
+    background-color: #008fcc; /* Mais escuro ao passar o mouse */
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.relatorio-page .btn-secondary {
+    background-color: #2a2d3e;
+    color: #ffffff;
+}
+
+.relatorio-page .btn-secondary:hover {
+    background-color: #3a3d4e;
+    box-shadow: 0 0 10px #00e6ff;
 }
