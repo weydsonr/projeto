@@ -1,0 +1,106 @@
+/* Centralizando a página de login */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+}
+
+/* Caixa de login */
+.login-container {
+  background-color: #1f1f1f;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.5);
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  color: #00bfff;
+  font-size: 50px;
+  margin-bottom: 25%;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
+  text-align: center; 
+  padding-left: 0;
+  margin-top: 0; /* Ajustando a margem superior */
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left; 
+}
+
+.form-group label {
+  font-size: 10%;
+  color: #00bfff; 
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #00bfff;
+  background-color: #fdfdfd;
+  color: #00bfff;
+  width: 100%;
+  font-size: 1em;
+}
+
+/* Ajuste para os botões */
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0099cc;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #007acc;
+}
+
+/* Botão de voltar */
+button.secondary {
+  background-color: #555;
+}
+
+button.secondary:hover {
+  background-color: #444;
+}
+
+button.secondary:active {
+  background-color: #333;
+}
+
+
+/* Responsividade - Garantir que o formulário fique bem em telas pequenas */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-container h2 {
+    font-size: 2em;
+  }
+
+  .form-group input {
+    padding: 8px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 8px;
+  }
+}

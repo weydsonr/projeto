@@ -1,0 +1,121 @@
+/* Página específica para o relatório */
+.relatorio-page {
+    background-color: #1c1f2b; /* Fundo escuro para toda a tela */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Arial', sans-serif;
+    height: auto; /* Preenche toda a altura da tela */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: center; /* Espaçamento em torno do conteúdo */
+}
+
+/* Container de conteúdo do relatório */
+.relatorio-container {
+    background-color: #2a2d3e; /* Fundo escuro mais intenso para a caixa */
+    padding: 30px;
+    border-radius: 10px;
+    width: center; /* Largura ajustada para 80% da tela */
+    max-width: 800px; /* Largura máxima de 800px */
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3); /* Efeito de sombra */
+    text-align: center; /* Centraliza o conteúdo da caixa */
+}
+
+/* Cabeçalho do relatório */
+.relatorio-container h1 {
+    color: #00bfff; /* Azul neon */
+    font-size: 30px; /* Tamanho da fonte ajustado */
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os campos do formulário */
+.relatorio-page .form-group {
+    width: auto;
+    max-width: 700px;
+    margin: 20px auto; /* Centraliza os campos */
+    padding: 10px;
+    border: 1px solid #00bfff; /* Borda azul neon */
+    border-radius: 8px;
+    background: rgba(0, 0, 50, 0.3); /* Fundo translúcido */
+    text-align: left; /* Garante que o texto do label fique alinhado à esquerda */
+}
+
+.relatorio-page label {
+    display: block;
+    font-weight: bold;
+    color: #00e6ff; /* Azul neon */
+    margin-bottom: 5px;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    text-shadow: 0 0 5px #00e6ff, 0 0 10px #00bfff;
+}
+
+.relatorio-page input[type="text"],
+.relatorio-page textarea,
+.relatorio-page select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    background-color: #2a2d3e;
+    color: #ffffff;
+    outline: none;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.relatorio-page input[type="text"]:focus,
+.relatorio-page textarea:focus,
+.relatorio-page select:focus {
+    border-color: #00e6ff;
+    box-shadow: 0 0 15px #00bfff;
+}
+
+.relatorio-page textarea {
+    resize: none;
+}
+
+/* Estilo do botão */
+.relatorio-page button {
+    display: block;
+    width: auto;
+    max-width: 200px;
+    padding: 10px;
+    margin: 20px auto; /* Centraliza o botão */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #00bfff; /* Azul neon */
+    color: #ffffff;
+}
+
+/* Botões com o estilo primário */
+.relatorio-page .btn-primary {
+    background-color: #00bfff;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Hover no botão primário */
+.relatorio-page .btn-primary:hover {
+    background-color: #008fcc;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+/* Botões com o estilo secundário */
+.relatorio-page .btn-secondary {
+    background-color: #2a2d3e;
+    color: #ffffff;
+}
+
+/* Hover no botão secundário */
+.relatorio-page .btn-secondary:hover {
+    background-color: #3a3d4e;
+    box-shadow: 0 0 10px #00e6ff;
+}

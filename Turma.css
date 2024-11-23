@@ -1,0 +1,92 @@
+/* Definindo a estrutura para a página específica */
+.turma-page {
+    height: 100%;
+    background-color: #1c1f2b; /* Fundo escuro para toda a tela */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Arial', sans-serif;
+}
+
+.turma-page .turma-container {
+    background-color: #1c1f2b; /* Fundo escuro para contraste */
+    color: #ffffff; /* Texto branco */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    height: 90vh; /* Ajusta para preencher a maior parte da tela */
+    overflow-y: auto; /* Permite rolagem caso o conteúdo exceda a tela */
+}
+
+.turma-page .turma-container h1 {
+    text-align: center;
+    color: #00bfff; /* Azul neon */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
+}
+
+.turma-page .turma-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.turma-page .turma-card {
+    background-color: #2a2d3e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #00bfff; /* Azul neon */
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.turma-page .turma-card:hover {
+    background-color: #1c1f2b;
+    box-shadow: 0 0 15px #00bfff;
+}
+
+.turma-page .aluno-list {
+    margin-top: 20px;
+}
+
+.turma-page .aluno-list h2 {
+    color: #00bfff; /* Azul neon */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.turma-page .aluno-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2a2d3e;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
+}
+
+.turma-page .aluno-item:hover {
+    background-color: #1c1f2b;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.turma-page .aluno-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.turma-page .aluno-item span {
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0 0 5px #00e6ff;
+}

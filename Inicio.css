@@ -1,0 +1,65 @@
+/* Container principal - escopo específico para a página Inicio */
+.inicio-page {
+    text-align: center;
+    background-color: #1c1f2b; /* Fundo escuro para contraste */
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Título principal */
+.inicio-page .inicio {
+    color: #00bfff; /* Azul neon */
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Descrição */
+.inicio-page .description {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Lista de navegação */
+.inicio-page .nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.inicio-page .nav-list li {
+    margin-bottom: 20px;
+}
+
+/* Links de navegação */
+.inicio-page .nav-link {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #00bfff; /* Azul neon */
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Efeito neon ao redor */
+}
+
+.inicio-page .nav-link:hover {
+    background-color: #008fcc; /* Azul mais escuro no hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bfff; /* Efeito mais intenso ao passar o mouse */
+}
+
+/* Ícone do link */
+.inicio-page .link-icon {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Efeitos de hover no link */
+.inicio-page .nav-link:focus, .inicio-page .nav-link:hover {
+    outline: none;
+    box-shadow: 0 0 15px #00bfff;
+}
