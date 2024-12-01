@@ -1,40 +1,83 @@
-.aluno-container {
-    max-width: 600px;
-    margin: auto;
+/* Página específica para a página do aluno */
+.aluno-page {
+    background-color: #1c1f2b; /* Fundo escuro para toda a tela */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Preenche toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Container de detalhes do aluno */
+.aluno-container {
+    background-color: #2a2d3e; /* Fundo mais escuro */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+
+/* Cabeçalho da página */
 .aluno-container h1 {
     text-align: center;
-    color: #4caf50;
+    color: #00bfff; /* Azul neon */
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
     margin-bottom: 20px;
 }
 
-.aluno-container p {
+/* Seção de foto e detalhes do aluno */
+.aluno-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.aluno-photo {
+    margin-right: 20px;
+}
+
+.foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00bfff; /* Borda azul neon */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+
+.aluno-details {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.aluno-details p {
     margin: 10px 0;
-    font-size: 1.1em;
+}
+
+/* Botões de ação */
+.aluno-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .aluno-actions button {
-    margin: 10px;
-    padding: 10px 15px;
+    padding: 12px 20px;
+    background-color: #00bfff; /* Azul neon */
+    color: #1c1f2b;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    text-align: center;
-    font-size: 16px; 
-    min-width: 100px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
+    transition: background-color 0.3s ease;
 }
 
-.aluno-actions button:first-child {
-    background-color: #4caf50;
-    color: white;
-}
-
-.aluno-actions button:last-child {
-    background-color: #2196f3;
-    color: white;
+.aluno-actions button:hover {
+    background-color: #0099cc;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.6);
 }

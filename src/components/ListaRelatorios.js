@@ -22,6 +22,7 @@ function ListaRelatorios() {
                         <p><strong>Sinalização:</strong> {relatorio.sinalizacao}</p>
                         <p><strong>Estado Emocional:</strong> {relatorio.estado_emocional}</p>
                         <p><strong>Comportamento:</strong> {relatorio.comportamento_em_sala}</p>
+                        <p><strong>Observação:</strong> {relatorio.observacao}</p>
                     </div>
                 ))
             )}
