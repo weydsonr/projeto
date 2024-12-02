@@ -11,13 +11,12 @@
     "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
+    "vite": "^6.0.2",
     "web-vitals": "^4.2.4"
   },
-
-"devDependencies": {
-  "typescript": "5.7.2"
-},
-
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
