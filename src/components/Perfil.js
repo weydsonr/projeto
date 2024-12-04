@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
-import './Perfil.css'; // Certifique-se de que o CSS está configurado corretamente
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './Perfil.css';
 
 const Perfil = () => {
-  const [perfil, setPerfil] = useState({
-    nome: 'João Silva',
-    dataNascimento: '1990-05-15',
-    sexo: 'Masculino',
-    endereco: 'Rua das Flores, 123',
-    email: 'joao@exemplo.com',
-    contato: '987654321',
-    formacao: 'Licenciatura em Matemática',
-    disciplina: 'Matemática',
-    turma: '3º Ano - A',
-    foto: 'https://via.placeholder.com/150' // Link da foto de perfil
-  });
-
+  const [perfil, setPerfil] = useState({});
   const [isEditing, setIsEditing] = useState(false);
+
+  // Função para buscar dados do banco de dados
+  useEffect(() => {
+    const fetchPerfil = async () => {
+      try {
+        const response = await axios.get('/api/perfil'); // Substitua pelo seu endpoint
+        setPerfil(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar dados do perfil:', error);
+      }
+    };
+
+    fetchPerfil();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setPerfil(prevState => ({
+    setPerfil((prevState) => ({
       ...prevState,
       [name]: value
     }));
@@ -28,7 +31,7 @@ const Perfil = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setPerfil(prevState => ({
+      setPerfil((prevState) => ({
         ...prevState,
         foto: URL.createObjectURL(file)
       }));
@@ -36,12 +39,17 @@ const Perfil = () => {
   };
 
   const toggleEdit = () => {
-    setIsEditing(prevState => !prevState);
+    setIsEditing((prevState) => !prevState);
   };
 
-  const saveChanges = () => {
-    alert('Alterações salvas com sucesso!');
-    toggleEdit(); 
+  const saveChanges = async () => {
+    try {
+      await axios.put('/api/perfil', perfil); // Substitua pelo seu endpoint
+      alert('Alterações salvas com sucesso!');
+      toggleEdit();
+    } catch (error) {
+      console.error('Erro ao salvar alterações:', error);
+    }
   };
 
   return (
@@ -68,7 +76,7 @@ const Perfil = () => {
             <input
               type="text"
               name="nome"
-              value={perfil.nome}
+              value={perfil.nome || ''}
               onChange={handleChange}
             />
           ) : (
@@ -82,7 +90,7 @@ const Perfil = () => {
             <input
               type="date"
               name="dataNascimento"
-              value={perfil.dataNascimento}
+              value={perfil.dataNascimento || ''}
               onChange={handleChange}
             />
           ) : (
@@ -95,7 +103,7 @@ const Perfil = () => {
           {isEditing ? (
             <select
               name="sexo"
-              value={perfil.sexo}
+              value={perfil.sexo || ''}
               onChange={handleChange}
             >
               <option value="Masculino">Masculino</option>
@@ -112,7 +120,7 @@ const Perfil = () => {
             <input
               type="text"
               name="endereco"
-              value={perfil.endereco}
+              value={perfil.endereco || ''}
               onChange={handleChange}
             />
           ) : (
@@ -126,7 +134,7 @@ const Perfil = () => {
             <input
               type="email"
               name="email"
-              value={perfil.email}
+              value={perfil.email || ''}
               onChange={handleChange}
             />
           ) : (
@@ -140,7 +148,7 @@ const Perfil = () => {
             <input
               type="text"
               name="contato"
-              value={perfil.contato}
+              value={perfil.contato || ''}
               onChange={handleChange}
             />
           ) : (
@@ -154,7 +162,7 @@ const Perfil = () => {
             <input
               type="text"
               name="formacao"
-              value={perfil.formacao}
+              value={perfil.formacao || ''}
               onChange={handleChange}
             />
           ) : (
@@ -168,7 +176,7 @@ const Perfil = () => {
             <input
               type="text"
               name="disciplina"
-              value={perfil.disciplina}
+              value={perfil.disciplina || ''}
               onChange={handleChange}
             />
           ) : (
@@ -182,7 +190,7 @@ const Perfil = () => {
             <input
               type="text"
               name="turma"
-              value={perfil.turma}
+              value={perfil.turma || ''}
               onChange={handleChange}
             />
           ) : (

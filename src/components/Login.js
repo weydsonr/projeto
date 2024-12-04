@@ -38,8 +38,15 @@ function Login() {
             />
           </Form.Group>
 
-          <Button as={Link} to="/inicio" variant="primary" type="submit">Entrar</Button>
-          <Button as={Link} to="/" variant="secondary" className="mt-2">Voltar</Button>
+          <Form.Group className="button-container">
+  <Button as={Link} to="/inicio" variant="primary" type="submit" className="primary">
+    Entrar
+  </Button>
+  <Button as={Link} to="/" variant="secondary" className="secondary">
+    Voltar
+  </Button>
+</Form.Group>
+
         </Form>
       </Container>
     </div>

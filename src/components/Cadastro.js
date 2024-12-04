@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Form, Button, Container } from 'react-bootstrap';
+import axios from 'axios'; // Importação do Axios para requisições HTTP
 import './Cadastro.css';
 
 function Cadastro() {
@@ -12,15 +12,49 @@ function Cadastro() {
   const [endereco, setEndereco] = useState('');
   const [telefone, setTelefone] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Cadastro realizado com:', nome, email, senha, sexo, endereco, telefone);
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Previne o recarregamento da página ao enviar o formulário
+
+    if (!nome || !data_nasci || !email || !senha || !sexo) {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+      return;
+    }
+
+    try {
+      // Envia os dados para o servidor
+      const response = await axios.post('http://localhost:5000/api/perfil', {
+        nome,
+        dataNascimento: data_nasci,
+        email,
+        senha,
+        sexo,
+        endereco,
+        contato: telefone,
+        foto: 'https://via.placeholder.com/150', // Foto padrão
+      });
+
+      if (response.status === 201) {
+        alert('Cadastro realizado com sucesso!');
+        setNome('');
+        setDataNasci('');
+        setEmail('');
+        setSenha('');
+        setSexo('');
+        setEndereco('');
+        setTelefone('');
+      } else {
+        alert('Erro ao realizar o cadastro. Tente novamente.');
+      }
+    } catch (error) {
+      console.error('Erro ao cadastrar:', error);
+      alert('Erro ao cadastrar. Por favor, tente novamente.');
+    }
   };
 
   return (
     <div className="cadastro-page">
       <Container className="cadastro-container">
-      <h2>Cadastro</h2>
+        <h2>Cadastro</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formNome">
             <Form.Label>Nome</Form.Label>
@@ -29,21 +63,20 @@ function Cadastro() {
               placeholder="Digite seu nome"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
+              required
             />
           </Form.Group>
 
-          {/* Campo Data de Nascimento */}
           <Form.Group controlId="formNascimento">
             <Form.Label>Data de Nascimento</Form.Label>
             <Form.Control
               type="date"
-              placeholder="data de nascimento"
               value={data_nasci}
               onChange={(e) => setDataNasci(e.target.value)}
+              required
             />
           </Form.Group>
 
-          {/* Campo Email */}
           <Form.Group controlId="formEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control
@@ -51,10 +84,10 @@ function Cadastro() {
               placeholder="Digite seu email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </Form.Group>
 
-          {/* Campo Senha */}
           <Form.Group controlId="formSenha">
             <Form.Label>Senha</Form.Label>
             <Form.Control
@@ -62,6 +95,7 @@ function Cadastro() {
               placeholder="Digite sua senha"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
+              required
             />
           </Form.Group>
 
@@ -71,6 +105,7 @@ function Cadastro() {
               as="select"
               value={sexo}
               onChange={(e) => setSexo(e.target.value)}
+              required
             >
               <option value="">Escolha seu sexo</option>
               <option value="Masculino">Masculino</option>
@@ -99,8 +134,7 @@ function Cadastro() {
             />
           </Form.Group>
 
-         
-          <Button as={Link} to="/inicio" variant="primary" type="submit">
+          <Button variant="primary" type="submit">
             Cadastrar
           </Button>
         </Form>

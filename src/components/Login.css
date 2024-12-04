@@ -24,68 +24,79 @@
   font-size: 50px;
   margin-bottom: 25%;
   text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
-  text-align: center; 
-  padding-left: 0;
-  margin-top: 0; /* Ajustando a margem superior */
 }
 
-
-.form-group {
-  margin-bottom: 20px;
-  text-align: left; 
-}
-
+/* Labels (nomes Email e Senha) */
 .form-group label {
-  font-size: 10%;
-  color: #00bfff; 
+  font-size: 1em; /* Tamanho do texto */
+  color: #00bfff; /* Cor azul neon */
+  text-shadow: 0 0 5px #00bfff, 0 0 10px #0099cc; /* Efeito de brilho */
   margin-bottom: 5px;
+  text-align: left; 
+  display: block;
 }
 
+
+/* Inputs */
 .form-group input {
   border-radius: 5px;
   padding: 10px;
   border: 1px solid #00bfff;
-  background-color: #fdfdfd;
+  background-color: #1f1f1f;
   color: #00bfff;
   width: 100%;
   font-size: 1em;
+  margin-bottom: 15px;
 }
 
-/* Ajuste para os botões */
+/* Alinhamento dos botões */
 button {
-  width: 100%;
-  margin-top: 10px;
+  width: 45%; /* Ajusta o tamanho para alinhamento */
+  margin: 0 2%; /* Espaçamento entre os botões */
   padding: 10px;
   font-size: 1.1em;
   border-radius: 5px;
   border: none;
   transition: background-color 0.3s, transform 0.2s;
+  color: #fff;
 }
 
-button:hover {
+/* Botão Primário (Entrar) */
+button.primary {
+  background-color: #00bfff;
+}
+
+button.primary:hover {
   background-color: #0099cc;
   transform: scale(1.05);
 }
 
-button:active {
+button.primary:active {
   background-color: #007acc;
 }
 
-/* Botão de voltar */
+/* Botão Secundário (Voltar) */
 button.secondary {
   background-color: #555;
 }
 
 button.secondary:hover {
   background-color: #444;
+  transform: scale(1.05);
 }
 
 button.secondary:active {
   background-color: #333;
 }
 
+/* Organização do container de botões */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Espaço igual entre os botões */
+  margin-top: 20px; /* Distância do formulário */
+}
 
-/* Responsividade - Garantir que o formulário fique bem em telas pequenas */
+/* Responsividade - Garantir layout amigável em telas pequenas */
 @media (max-width: 768px) {
   .login-container {
     padding: 20px;
@@ -99,8 +110,12 @@ button.secondary:active {
     padding: 8px;
   }
 
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   button {
-    font-size: 1em;
-    padding: 8px;
+    width: 100%; /* Botões ocupam toda a largura em telas pequenas */
   }
 }

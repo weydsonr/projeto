@@ -1,40 +1,61 @@
 .lista-relatorios-container {
     padding: 20px;
     max-width: 900px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
+    margin: 50px auto;
+    background-color: #2a2d3e;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #0099cc;
     margin-bottom: 20px;
 }
 
 .relatorio-item {
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 4px;
-    color: #333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 191, 255, 0.3);
+    background: rgba(0, 0, 50, 0.3);
 }
 
 .relatorio-item p {
     margin: 5px 0;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #ffffff;
 }
 
-/* Cores de sinalização reutilizadas */
+
 .sinalizacao-verde {
-    background-color: #d4edda;
+    background-color: rgba(40, 167, 69, 0.2);
     border-left: 5px solid #28a745;
+    box-shadow: 0 0 10px #28a745, 0 0 15px rgba(40, 167, 69, 0.5);
 }
 
 .sinalizacao-amarelo {
-    background-color: #fff3cd;
+    background-color: rgba(255, 193, 7, 0.2);
     border-left: 5px solid #ffc107;
+    box-shadow: 0 0 10px #ffc107, 0 0 15px rgba(255, 193, 7, 0.5);
 }
 
 .sinalizacao-vermelho {
-    background-color: #f8d7da;
+    background-color: rgba(220, 53, 69, 0.2);
     border-left: 5px solid #dc3545;
+    box-shadow: 0 0 10px #dc3545, 0 0 15px rgba(220, 53, 69, 0.5);
+}
+
+.lista-relatorios-container p {
+    font-size: 14px;
+    color: #ffffff;
 }
