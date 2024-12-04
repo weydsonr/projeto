@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://inosphere-mentalhealth.netlify.app",
   "dependencies": {
+    "axios": "^1.7.8",
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
@@ -15,9 +16,8 @@
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
-  "typescript": "4.9.5"
-},
-
+    "typescript": "4.9.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
